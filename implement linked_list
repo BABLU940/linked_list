@@ -1,0 +1,23 @@
+class Node:
+    def __init__(self,val= None):
+        self.val = val
+        self.nextval =None
+class linkedlist:
+    def __init__(self):
+        self.headval = None
+    
+    def listprint(self):
+        lis = self.headval
+        while(lis != None):
+            print(lis.val)
+            lis=lis.nextval
+            
+listResult = linkedlist()
+listResult.headval= Node(5)
+l= Node(3)
+r= Node(6)
+m =Node(7)
+listResult.headval.nextval= l
+l.nextval= r
+r.nextval = m
+listResult.listprint()
